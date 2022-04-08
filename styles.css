@@ -1,0 +1,109 @@
+/* INICIO GENERAL SETTINGS */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Facilita el uso de medidas relativas, ya que, entonces: 1rem = 10px */
+:root {
+    font-size: 10px;
+}
+
+/* FIN GENERAL SETTINGS */
+
+
+/* Establecemos el fondo general con color en azul y el tamaño "por defecto" de los 
+textos a utilizar en 16px */
+body {
+    background-color: #066acd;
+}
+/* Posicionamos al contenedor central en el medio de la página y le establecemos 
+un tamaño mínimo */
+.container {
+    background-color: #ffffff;
+    width: 40%;
+    min-width: 45rem;
+    min-height: 10rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+}
+#new-task {
+    padding: 3rem 2rem;
+}
+/* Casilla de texto en donde se escriben las tareas */
+#new-task input {
+    width: 75%;
+    height: 4.5rem;
+    border: 1px solid gray;
+    border-radius: .5rem;
+    outline-color: blue;
+    padding-left: 1rem;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+#new-task input:focus {
+    outline: none;
+    border-color: #0d75ec;
+}
+/* Botón utilizado para agregar la tarea escrita */
+#new-task button {
+    position: relative;
+    float: right;
+    font-weight: 500;
+    font-size: 1.6rem;
+    background-color: #0d75ec;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    cursor: pointer;
+    width: 20%;
+    height: 4.5rem;
+    border-radius: .5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* contenedor general de las tareas añadidas*/
+#tasks {
+    border-radius: 1rem;
+    width: 100%;
+    position: relative;
+    background-color: #ffffff;
+    padding: 3rem 2rem;
+    margin-top: 1rem;
+}
+
+/* Elementos añadidos por JS */
+    /* Casilla de la tarea individual */
+.task{
+    border-radius: .5rem;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #939697;
+    cursor: pointer;
+    background-color: #c5e1e6;
+    height: 5rem;
+    margin-bottom: .8rem;
+    padding: .5rem 1rem;
+    display: flex;
+}
+    /* Texto de la tarea */
+.task span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+    /* Botón que nos permite borrar la tarea en cuestión */
+.task button {
+    background-color: #0a2ea4;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    height: 100%;
+    width: 4rem;
+    border-radius: .5rem;
+}
